@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Hello Vue :)</h1>
+
+    <div id="app">
+      <p>{{title}} - {{author}} - {{age}}</p>
+
+      <button class="buttonOne" @click="age++">Increase Age</button>
+      <button class="buttonTwo" @click="age--">Decrease Age</button>
+
+      <div class="divButton" @click="changeTitle('HarryPotter')">
+        Change Title to someThing
+      </div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
