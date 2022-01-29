@@ -4,12 +4,12 @@ const app = Vue.createApp({
       title: "The Final Empire",
       author: "Brandon Samsung",
       age: 45,
+      showBooks: true,
     };
   },
   methods: {
-    changeTitle(title) {
-      //   this.title = "Words of Radiance";
-      this.title = title;
+    toggleShowBooks() {
+      this.showBooks = !this.showBooks;
     },
   },
 });

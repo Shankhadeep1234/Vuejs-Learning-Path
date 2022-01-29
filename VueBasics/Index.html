@@ -12,14 +12,12 @@
     <h1>Hello Vue :)</h1>
 
     <div id="app">
-      <p>{{title}} - {{author}} - {{age}}</p>
-
-      <button class="buttonOne" @click="age++">Increase Age</button>
-      <button class="buttonTwo" @click="age--">Decrease Age</button>
-
-      <div class="divButton" @click="changeTitle('HarryPotter')">
-        Change Title to someThing
+      <div v-if="showBooks">
+        <p>{{title}} - {{author}} - {{age}}</p>
       </div>
+      <button>
+        <span @click="toggleShowBooks">Toggle Show/Hide</span>
+      </button>
     </div>
 
     <script src="app.js"></script>
