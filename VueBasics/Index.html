@@ -12,14 +12,16 @@
     <h1>Hello Vue :)</h1>
 
     <div id="app">
+      <div v-show="showBooks">Currently showing books</div>
       <div v-if="showBooks">
         <p>{{title}} - {{author}} - {{age}}</p>
       </div>
-      <button>
-        <span @click="toggleShowBooks">Toggle Show/Hide</span>
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books</span>
+        <!-- <span v-else>Show Books</span> if we don't wanna write v-if again we can just write v-else to achieve it -->
+        <span v-if="!showBooks">Show Books</span>
       </button>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>
