@@ -21,6 +21,15 @@
         <!-- <span v-else>Show Books</span> if we don't wanna write v-if again we can just write v-else to achieve it -->
         <span v-if="!showBooks">Show Books</span>
       </button>
+
+      <br />
+      <!--Mouse event-->
+      <div class="box" @mouseover="handleEvent($event, 5)">
+        Mouseover (enter)
+      </div>
+      <div class="box" @mouseleave="handleEvent">Mouseleave</div>
+      <div class="box" @dblclick="handleEvent">DoubleClick</div>
+      <div class="box" @mousemove="handleMousemove">Position {{x}} {{y}}</div>
     </div>
     <script src="app.js"></script>
   </body>
